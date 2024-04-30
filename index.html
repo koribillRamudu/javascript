@@ -11,6 +11,12 @@
             
             <h2 id="c"></h2>
             <h2 id="g"></h2>
+
+            <form onclick="even_or_odd();return false">
+                <input type="number" id="a" placeholder="enter the a value">
+                <button type="submit" name="submit"></button>
+                </form>
+                <h2 id="z"></h2>
     </body>
     <script>
         function addtwonumber() {
@@ -21,6 +27,16 @@
 
             let f=a*b;
             document.getElementById('g').textContent=`the  mulitply of two number is ${f}`;
+        }
+        function even_or_odd() {
+            let a=parseInt(document.getElementById('a').value);
+            if (a %2==0) {
+                document.getElementById('z').textContent=`the given number is even ${a}`;
+            }
+            else{
+                document.getElementById('z').textContent=`the given number is not even ${a}`;
+            }
+            
         }
     </script>
     </html>
