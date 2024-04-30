@@ -7,16 +7,21 @@
             <input type="number" id="a" placeholder="enter the a value">
             <input type="number" id="b" placeholder="enter the b value">
             <button type="submit" name="submit">submit</button>
-            </form>
-            
+        </form>
             <h2 id="c"></h2>
             <h2 id="g"></h2>
 
-            <form onclick="even_or_odd();return false">
-                <input type="number" id="a" placeholder="enter the a value">
+        <form onclick="even_or_odd();return false">
+                <input type="number" id="t" placeholder="enter the a value">
                 <button type="submit" name="submit"></button>
-                </form>
-                <h2 id="z"></h2>
+        </form>
+            <h2 id="z"></h2>
+            <form onclick="countvowels();return false">
+                <input type="text" id="s" placeholder="enter the string">
+                <button type="submit" name="submit">submit</button>
+            </form>
+            <h1 id="y"></h1>
+                
     </body>
     <script>
         function addtwonumber() {
@@ -29,7 +34,7 @@
             document.getElementById('g').textContent=`the  mulitply of two number is ${f}`;
         }
         function even_or_odd() {
-            let a=parseInt(document.getElementById('a').value);
+            let a=parseInt(document.getElementById('t').value);
             if (a %2==0) {
                 document.getElementById('z').textContent=`the given number is even ${a}`;
             }
@@ -38,5 +43,16 @@
             }
             
         }
+        function countvowels(){
+            let s=String(document.getElementById('s').value);
+            let c=0;
+            a='aeiou';
+            for(i in s){
+                if(a.includes(s[i])){
+                    c=c+1;
+                }
+            }
+            document.getElementById('y').textContent=`the total vowels in the given string is ${c}`;
+            }
     </script>
     </html>
