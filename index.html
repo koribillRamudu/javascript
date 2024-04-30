@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>basics</title>
+    </head>
+    <body>
+        <form onclick="addtwonumber();return false">
+            <input type="number" id="a" placeholder="enter the a value">
+            <input type="number" id="b" placeholder="enter the b value">
+            <button type="submit" name="submit">submit</button>
+            </form>
+            
+            <h2 id="c"></h2>
+            <h2 id="g"></h2>
+    </body>
+    <script>
+        function addtwonumber() {
+            let a= parseInt(document.getElementById('a').value);
+            let b=parseInt(document.getElementById('b').value);
+            let d=a+b;
+            document.getElementById('c').textContent=`the sum of two number is ${d}`;
+
+            let f=a*b;
+            document.getElementById('g').textContent=`the  mulitply of two number is ${f}`;
+        }
+    </script>
+    </html>
